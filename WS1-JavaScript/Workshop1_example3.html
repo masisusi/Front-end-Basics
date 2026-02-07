@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Loops and Functions Example</h1>
+    <script>
+        function areYouOldEnough(age) {
+            if (age >= 18) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        for (let i = 16; i <= 20; i++) {
+            if (areYouOldEnough(i)) {
+                console.log("A person of age " + i + " is old enough.");
+            } else {
+                console.log("A person of age " + i + " is not enough.");
+            }
+        }
+    </script>
+</body>
+</html>
