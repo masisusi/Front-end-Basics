@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>WS2: Exercise 4</title>
+</head>
+<body>
+    <h2>This is Exercise 4 of Workshop2 - DOM-BOM</h2>
+
+    <p id="answer"></p>
+
+    <script>
+        let confirmed= confirm("Are you a student?");
+        
+        if (confirmed) {
+            document.getElementById("answer").innerHTML = "You are a student.";
+        } else {
+            document.getElementById("answer").innerHTML = "You are NOT a student.";
+        }
+    </script>
+</body>
+</html>

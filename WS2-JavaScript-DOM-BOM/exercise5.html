@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>WS2: Exercise 5</title>
+</head>
+<body>
+    <h2>This is Workshop 2 Exercise 5</h2>
+    
+    <img id="randomImage" width="300">
+    
+    <script>
+        //let's create list of all the photos
+        let myPhotos = [
+            "../photos/image1.jpg",
+            "../photos/image2.jpg",
+            "../photos/image3.jpg",
+            "../photos/image4.jpg"
+        ];
+
+        //select a random number and store it for later use
+        var randomIndex = Math.floor(Math.random() * myPhotos.length);
+        
+        console.log(randomIndex) //this shows which index was picked
+
+        //now we'll see a random photo from the array list every time site is updated
+        document.getElementById("randomImage").src = myPhotos[randomIndex];
+    </script>
+</body>
+</html>
