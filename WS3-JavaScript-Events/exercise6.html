@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Listeners</title>
+</head>
+<body>
+    <button id="a"> Click for Multiple</button>
+    <script>
+        // var element: retrieves the button with id='a'
+        var element = document.getElementById('a');
+        // This overwrites the previous onclick, only the last onclick is executed
+        element.onclick = function() {alert('First!'); };
+        element.onclick = function() {alert('Second!'); }; //only this one is executed
+
+        // These both function (multiple)
+        element.addEventListener('click', function() {alert('Third!');});
+        element.addEventListener('click', function() {alert('Fourth!');});
+    </script>
+</body>
+</html>

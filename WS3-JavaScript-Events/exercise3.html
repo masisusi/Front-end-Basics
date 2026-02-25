@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Named Functions for Events</title>
+</head>
+<body>
+    <h1>Named Functions Demonstration</h1>
+    <p>What is the name(s) of your browser?</p>
+
+    <!--onclick triggers action on click-->
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        //document.write overwrites content if used after load
+        function myFunction() {
+            document.write("Name is " + navigator.appName);
+            document.write("<br> Code name is " + navigator.appCodeName);
+        }
+    </script>
+
+</body>
+</html>

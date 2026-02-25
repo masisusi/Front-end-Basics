@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Common Events List</title>
+</head>
+<body onload="alert('Page loaded!')">
+    <h1>Common events</h1>
+
+    <select onchange="alert('Selection changed!')">
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+
+    <!--onmouseover: changes shown image when mouse on 
+    onmouseout: -->
+    <img src="/photos/image1.jpg"
+        onmouseover="this.src='/photos/image2.jpg'"
+        onmouseout="this.src='/photos/image1.jpg'"
+        alt="Hover Image"
+        width="300">
+
+    <!--onkeydown: Triggers alert on (any) key press-->
+    <input type="text" onkeydown="alert('Key down!')">
+</body>
+</html>
