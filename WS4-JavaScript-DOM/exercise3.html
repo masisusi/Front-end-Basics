@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Content and Attributes</title>
+</head>
+<body>
+    <!-- All tags have their own unique IDs for targeting  -->
+    <h1 id="myHeading">Original Heading Text</h1> <!--Heading to change-->
+    <p id="myParagraph">This is the original paragraph content.</p> <!--Paragraph to change-->
+    <img id="myImage" src="/photos/image1.jpg" alt="Placeholder Image" height="300"> <!--Image with attributes-->
+    <br><br> <!--br makes a line break-->
+    <a id="myLink" href="https://www.google.com">Visit Google</a> <!--Link to modify-->
+
+
+    <script>
+        // 1. Change innerHTML (allows HTML tags)
+        const headingElement = document.getElementById('myHeading');
+        headingElement.innerHTML = '<strong>New <em>Updated</em> Heading</strong>';
+
+        // 2. Change textContent (plain text only)
+        const paragraphElement = document.getElementById('myParagraph');
+        paragraphElement.textContent = 'The paragraph content has changed to plain text.';
+
+        // 3. Change image attributes
+        const imageElement = document.getElementById('myImage');
+        imageElement.setAttribute('src', '/photos/image3.jpg');
+        imageElement.setAttribute('alt', 'Moomin characters');
+
+        // 4. Change link attributes and text
+        const linkElement = document.getElementById('myLink');
+        linkElement.setAttribute('href', 'https://www.w3schools.com');
+        linkElement.setAttribute('target', '_blank'); // opens in a new tab
+        linkElement.textContent = 'Visit W3Schools';
+
+    </script>
+
+</body>
+</html>

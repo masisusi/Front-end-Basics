@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Styles and Animation</title>
+    <style>
+        /* Red background style. Defines class ie nothing happens yet; when element gets class="red-background" it turns red*/
+        .red-background { background-color: red; color: white; padding: 10px; margin-top: 10px; }
+
+        /* Fade animation */
+        .fade-in { opacity: 0; animation: fadeIn 2s forwards; }
+        @keyframes fadeIn { to {opacity: 1;} }
+    </style>
+</head>
+
+<body>
+    <!-- This button changes the style of the paragraph -->
+    <button id="changeStyleBtn">Toggle Red background</button>
+    <p id="styledParagraph">This paragraph's style will change</p>
+
+    <!-- This button starts the animation for the heading -->
+    <button id="animateBtn">Fade In Heading</button>
+    <h1 id="animatedHeading">I will fade in!</h1>
+
+    <script>
+        // 1. Toggle style using classList
+        const paragraph = document.getElementById('styledParagraph');
+        // Retrieve the button and ADD action to button with addEventListener (if button is clicked => defined action happens)
+        document.getElementById('changeStyleBtn').addEventListener('click', () => {
+            paragraph.classList.toggle('red-background'); // if class is missing, it's added (and vice versa) AKA ON/OFF-effect
+        });
+
+        // 2. Trigger animation by adding class
+        const headingToAnimate = document.getElementById('animatedHeading');
+        headingToAnimate.style.opacity = '0' // starts hidden when page is loaded
+        document.getElementById('animateBtn').addEventListener('click', () => {
+            headingToAnimate.classList.add('fade-in'); // starts the animation
+            // This works only once becayse the class is never removed.
+            // The animation will not restart unless the class is removed and re-added
+            // Using .toggle would remove and add class
+        });
+
+    </script>
+</body>
+</html>

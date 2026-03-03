@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Elements</title>
+</head>
+<body>
+    <h1 id="unique-id">My Unique Heading</h1>
+    
+    <p class="info-text">First info paragraph.</p>
+    <p class="info-text">Second info paragraph.</p>
+    <div>A simple div.</div>
+    <div>Another div.</div>
+
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+    </ul>
+
+
+    <script>
+        // 1. Get element by ID (single element). 
+        const uniqueHeading = document.getElementById('unique-id');  //Selects the h1 by it's unique ID
+        console.log('Element by ID:', uniqueHeading.textContent); // Outputs the h1 text to verify selection (aka let's us see on the console)
+
+        // 2. Get elements by Class Name (HTML Collection)
+        const infoParagraphs = document.getElementsByClassName('info-text'); // Retrieves all elements with class 'info-text'
+        console.log('Elements by Class Name:', infoParagraphs[0].textContent); // Logs the first paragraph's text, because [0] is first on array list
+
+        // 3. Get elements by Tag Name (HTML Collection)
+        const allParagraphs = document.getElementsByTagName('p'); // Collects all paragraph elements.
+        console.log('Elements by Tag Name (all paragraphs):', allParagraphs.length); // .length logs the number of paragraphs that were found upon collection.
+
+        // 4. Queary Selector (first match)
+        const firstDiv = document.querySelector('div'); // Selects the first div using a CSS selector
+        console.log('First Div by Query Selector:', firstDiv.textContent); // Logs the div's text.
+
+        // 5. Queary Selector All (NodeList)
+        const allListItems = document.querySelectorAll('ul li'); // Selects all list items within a ul. There can be multiple lists, all list items will be selected
+        console.log('All List Items by Query Selector All:', allListItems.length); // Logs the count of list items, from all lists added together
+
+        
+    </script>
+</body>
+</html>
