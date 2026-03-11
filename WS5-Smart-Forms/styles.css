@@ -1,0 +1,34 @@
+/* Defines colour variables for consistency */
+:root {
+    --brand: #019dd5;
+    --danger: #c0392b;
+    --ok: #2e7d32;
+}
+* { box-sizing: border-box; } /* Ensures consistent box model*/
+
+body { font-family: system-ui,'Segoe UI',sans-serif; margin: 0; } /* Sets font and removes margins*/
+
+.container { max-width: 680px; margin: 18px auto; padding: 0 14px; } /* Limits content width and adds padding*/
+
+label { display: block; margin-top: 12xp; font-weight: 600; } /* Styles labels as blocks*/
+
+input, button { font: inherit;} /* Inherits font styles*/
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+    width: 100%; padding: 10px 12px; border: 1px solid #cfd7e6; border-radius: 8px; margin-top: 6px;
+} /* Sets input appearance*/
+
+input:focus { outline: 3px solid rgba(1,157,213,0.25); border-color: var(--brand);} /* Adds focus styling*/
+
+input:invalid[aria-invalid="true"] { border-color: var(--danger); background: #fff5f5; } /* Highlights invalid inputs with red border and background*/
+input:valid { border-color: #a9d6c9;} /* Marks valid input with a green border*/
+
+.help { color: #5b6b7c;} /* Styles help text in grey*/
+.error { color: var(--danger); margin: 6px 0 0 ; min-height: 1.2em; } /* Displays errors in red with minimum height */
+
+.visually-hidden { position: absolute; left: -9999px; } /* Hides elements accessibly */
+
+#error-summary { background: #fff3f3; border-left: 6px solid var(--danger); padding: 12px; border-radius: 8px; margin: 0 0 12px; } /* Styles the error summary with a red border */
+
+.btn { background: var(--brand); color: #fff; border: 1px solid #0d4a62; padding: 10px 14px; border-radius: 10px; margin-top: 14px; cursor: pointer; } /* Styles the submit button with brand colour */
+.btn-secondary { background: #eef2f7; column-rule-color: #1f2a3a; border: 1px solid #cfd7e6; padding: 10px 14px; border-radius: 10px; margin-left: 8px; cursor: pointer; } /* Styles the clear button with a neutral background */
